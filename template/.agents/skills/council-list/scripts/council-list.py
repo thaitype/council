@@ -39,6 +39,10 @@ def show_detail(artifact_id: str):
             if e.get("exit_code") is not None:
                 extra = f" exit={e['exit_code']}{extra}"
             print(f"  [{ts}] {event}{extra}")
+            if e.get("stdout"):
+                print(f"    stdout: {e['stdout']}")
+            if e.get("stderr"):
+                print(f"    stderr: {e['stderr']}")
 
 
 def show_list(status_filter: str | None):
