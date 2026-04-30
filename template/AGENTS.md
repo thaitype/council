@@ -14,7 +14,7 @@ If the project runs WITHOUT a sandbox, ALL bash commands are denied. Everything 
 
 1. Do your research and analysis
 2. Write a script (`.sh` or `.py`) to `.council/artifacts/<slug>/`
-3. Register it: `python .council/scripts/council-create.py --id <slug> --type <type> --risk <low|medium|high> --summary "..." --script <path>`
+3. Register it: `python .agents/skills/council-create/scripts/council-create.py --id <slug> --type <type> --risk <low|medium|high> --summary "..." --script <path>`
 4. Wait for human review
 
 ## Artifact Sizing
@@ -50,8 +50,8 @@ Use your coding agent's native permission system to enforce this:
   "permissions": {
     "deny": ["Bash(*)"],
     "allow": [
-      "Bash(python .council/scripts/council-create.py *)",
-      "Bash(python .council/scripts/council-list.py *)"
+      "Bash(python .agents/skills/council-create/scripts/council-create.py *)",
+      "Bash(python .agents/skills/council-list/scripts/council-list.py *)"
     ]
   }
 }

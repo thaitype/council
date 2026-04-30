@@ -12,20 +12,20 @@ Use this to view artifacts and their current status.
 List all artifacts:
 
 ```bash
-python .council/scripts/council-list.py
+python .agents/skills/council-list/scripts/council-list.py
 ```
 
 Filter by status:
 
 ```bash
-python .council/scripts/council-list.py --status pending
-python .council/scripts/council-list.py --status approved
-python .council/scripts/council-list.py --status executed
-python .council/scripts/council-list.py --status rejected
+python .agents/skills/council-list/scripts/council-list.py --status pending
+python .agents/skills/council-list/scripts/council-list.py --status approved
+python .agents/skills/council-list/scripts/council-list.py --status executed
+python .agents/skills/council-list/scripts/council-list.py --status rejected
 ```
 
 Show detail for one artifact:
 
 ```bash
-python .council/scripts/council-list.py --id ART-001-pod-crash
+python .agents/skills/council-list/scripts/council-list.py --id ART-001-pod-crash
 ```

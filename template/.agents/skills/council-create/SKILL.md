@@ -19,7 +19,7 @@ mkdir -p .council/artifacts/<slug>
 2. Register the artifact:
 
 ```bash
-python .council/scripts/council-create.py --id <slug> --type <type> --risk <low|medium|high> --summary "<what and why>" --script .council/artifacts/<slug>/<script-file>
+python .agents/skills/council-create/scripts/council-create.py --id <slug> --type <type> --risk <low|medium|high> --summary "<what and why>" --script .council/artifacts/<slug>/<script-file>
 ```
 
 ## Arguments

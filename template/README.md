@@ -43,7 +43,7 @@ your-project/
 ```bash
 mkdir -p .council/artifacts/fix-nginx
 # Agent writes fix-nginx/restart.sh
-python .council/scripts/council-create.py \
+python .agents/skills/council-create/scripts/council-create.py \
   --id fix-nginx --type remediation --risk low \
   --summary "Restart nginx after config update" \
   --script .council/artifacts/ART-001-fix-nginx/restart.sh
@@ -53,16 +53,16 @@ python .council/scripts/council-create.py \
 
 ```bash
 # List pending artifacts
-python .council/scripts/council-list.py --status created
+python .agents/skills/council-list/scripts/council-list.py --status created
 
 # Read the script, then approve or reject
-python .council/scripts/council-review.py ART-001-fix-nginx --approve --comment "looks good"
+python .agents/skills/council-review/scripts/council-review.py ART-001-fix-nginx --approve --comment "looks good"
 ```
 
 ### Human executes
 
 ```bash
-python .council/scripts/council-execute.py ART-001-fix-nginx
+python .agents/skills/council-execute/scripts/council-execute.py ART-001-fix-nginx
 ```
 
 ## Requirements
